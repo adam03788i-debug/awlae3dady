@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>علوم - أولى إعدادي</title>
+</head>
+
+<body>
+
+    <h1>🔬 علوم أولى إعدادي</h1>
+
+    <h2>📚 الدروس</h2>
+
+    <p>1️⃣ المادة وخواصها</p>
+    <p>2️⃣ الطاقة</p>
+    <p>3️⃣ الكائنات الحية</p>
+
+    <h2>📝 اختبار سريع</h2>
+<h2>📝 اختبار العلوم</h2>
+
+<p>1️⃣ أي مما يلي حالة من حالات المادة؟</p>
+<button onclick="answer(1, true)">الصلبة</button>
+<button onclick="answer(1, false)">الضوء</button>
+
+<p>2️⃣ ما مصدر الضوء والحرارة الرئيسي للأرض؟</p>
+<button onclick="answer(2, true)">الشمس ☀️</button>
+<button onclick="answer(2, false)">القمر 🌙</button>
+
+<p>3️⃣ أي مما يلي كائن حي؟</p>
+<button onclick="answer(3, true)">النبات 🌱</button>
+<button onclick="answer(3, false)">الصخر 🪨</button>
+
+<h2 id="result"></h2>
+
+<script>
+let score = 0;
+let answered = 0;
+
+function answer(question, correct) {
+    if (correct) {
+        score++;
+        alert("✅ إجابة صحيحة!");
+    } else {
+        alert("❌ إجابة خاطئة!");
+    }
+
+    answered++;
+
+    if (answered === 3) {
+        document.getElementById("result").textContent =
+            "🏆 نتيجتك: " + score + " من 3";
+    }
+}
+</script>
+    <p>أي مما يلي يُعد حالة من حالات المادة؟</p>
+
+    <button onclick="alert('✅ إجابة صحيحة!')">
+        الصلبة
+    </button>
+
+    <button onclick="alert('❌ حاول مرة أخرى')">
+        الضوء
+    </button>
+
+</body>
+</html>

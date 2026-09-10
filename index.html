@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+  <style>
+body {
+    margin: 0;
+    background: #f0f7ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+
+h1 {
+    background: #2563eb;
+    color: white;
+    padding: 25px;
+    margin: 0;
+}
+
+h2 {
+    color: #2563eb;
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: white;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    padding: 15px 25px;
+    margin: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #2563eb;
+    color: white;
+
+</style>
+  <title>أولى إعدادي</title>
+</head>
+<body>
+  <a href="login.html">
+    <button>👨‍🎓 تسجيل الدخول</button>
+  </a>
+
+
+    <h1>🎓 أهلاً بكم في موقع أولى إعدادي</h1>
+
+    <p>موقع تعليمي لطلاب الصف الأول الإعدادي.</p>
+
+    <h2 id="subjects">📚 المواد الدراسية</h2>
+<a href="math.html">
+    <button>📐 الرياضيات</button>
+</a>
+
+<a href="science.html">
+    <button>🔬 العلوم</button>
+</a>
+<a href="game.html">
+    <button>🎮 لعبة تحدي المعلومات</button>
+</a>
+<br><br>
+
+<a href="studies.html">
+    <button>🌍 الدراسات الاجتماعية</button>
+</a>
+
+<br><br>
+
+<<a href="english.html">
+    <button>🇬🇧 اللغة الإنجليزية</button>
+</a> 
+<body></body>
+<div class="welcome">
+    <h1>🎓 أولى إعدادي</h1>
+    <p>اتعلم بسهولة وراجع دروسك واختبر نفسك 📚</p>
+<p id="studentWelcome"></p>
+    <a href="#subjects">
+        <button>🚀 ابدأ التعلم</button>
+    </a>
+</div>
+</html><script>
+    let studentName = localStorage.getItem("studentName");
+
+    if (studentName) {
+        document.getElementById("studentWelcome").textContent =
+            "👋 أهلاً يا " + studentName;
+    }
+</script>

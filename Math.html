@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>رياضيات - أولى إعدادي</title>
+</head>
+
+<body>
+
+    <h1>📐 رياضيات أولى إعدادي</h1>
+
+    <h2>📚 الدروس</h2>
+
+    <p>1️⃣ الأعداد والعمليات عليها</p>
+    <p>2️⃣ الجبر</p>
+    <p>3️⃣ الهندسة</p>
+
+    
+<h2>📝 اختبار الرياضيات</h2>
+
+<p>1️⃣ كم يساوي 5 × 6 ؟</p>
+<button onclick="answer(1, true)">30</button>
+<button onclick="answer(1, false)">25</button>
+
+<p>2️⃣ كم يساوي 10 + 5 ؟</p>
+<button onclick="answer(2, true)">15</button>
+<button onclick="answer(2, false)">20</button>
+
+<p>3️⃣ كم يساوي 20 ÷ 4 ؟</p>
+<button onclick="answer(3, true)">5</button>
+<button onclick="answer(3, false)">4</button>
+
+<h2 id="result"></h2>
+
+<script>
+let score = 0;
+let answered = 0;
+
+function answer(question, correct) {
+    if (correct) {
+        score++;
+        alert("✅ إجابة صحيحة!");
+    } else {
+        alert("❌ إجابة خاطئة!");
+    }
+
+    answered++;
+
+    if (answered === 3) {
+        document.getElementById("result").textContent =
+            "🏆 نتيجتك: " + score + " من 3";
+    }
+}
+</script>
+    <p>كم يساوي 5 × 6 ؟</p>
+
+    <button onclick="alert('إجابة صحيحة! 🎉')">
+        30
+    </button>
+
+    <button onclick="alert('حاول مرة أخرى 😊')">
+        25
+    </button>
+
+</body>
+  <a href="index.html">
+    <button>🏠 الصفحة الرئيسية</button>
+  </a>
+</html>

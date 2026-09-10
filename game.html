@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>🎮 لعبة أولى إعدادي</title>
+
+    <style>
+        body {
+            background: #f0f7ff;
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .game {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 8px;
+            border: 0;
+            border-radius: 10px;
+            background: #2563eb;
+            color: white;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="game">
+
+    <h1>🎮 تحدي المعلومات</h1>
+
+    <p id="question"></p>
+
+<button id="answer1" onclick="answer(0)"></button>
+<button id="answer2" onclick="answer(1)"></button>
+
+<h2 id="score">🏆 النقاط: 0</h2>
+
+<script>
+let questions = [
+    {
+        question: "ما هو أكبر كوكب؟",
+        answers: ["المشتري 🪐", "الأرض 🌍"],
+        correct: 0
+    },
+    {
+        question: "كم عدد أيام الأسبوع؟",
+        answers: ["7 أيام", "10 أيام"],
+        correct: 0
+    },
+    {
+        question: "ما عاصمة مصر؟",
+        answers: ["القاهرة", "الإسكندرية"],
+        correct: 0
+    }
+];
+
+let current = 0;
+let score = 0;
+
+function showQuestion() {
+    document.getElementById("question").textContent =
+        questions[current].question;
+
+    document.getElementById("answer1").textContent =
+        questions[current].answers[0];
+
+    document.getElementById("answer2").textContent =
+        questions[current].answers[1];
+}
+
+function answer(choice) {
+    if (choice === questions[current].correct) {
+        score++;
+        alert("🎉 إجابة صحيحة!");
+    } else {
+        alert("😅 إجابة خاطئة!");
+    }
+
+    current++;
+
+    if (current < questions.length) {
+        showQuestion();
+    } else {
+        document.getElementById("question").textContent =
+            "🏆 انتهت اللعبة! نتيجتك: " + score + " من 3";
+
+        document.getElementById("answer1").style.display = "none";
+        document.getElementById("answer2").style.display = "none";
+    }
+
+    document.getElementById("score").textContent =
+        "🏆 النقاط: " + score;
+}
+
+showQuestion();
+</script>
+let score = 0;
+
+function answer(correct) {
+    if (correct) {
+        score++;
+        alert("🎉 إجابة صحيحة!");
+    } else {
+        alert("😅 إجابة خاطئة!");
+    }
+
+    document.getElementById("score").textContent =
+        "🏆 النقاط: " + score;
+}
+</>
+
+</body>
+</html>

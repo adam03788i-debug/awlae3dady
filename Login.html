@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول - أولى إعدادي</title>
+
+    <style>
+        body {
+            background: #f0f7ff;
+            font-family: Arial;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .login {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: 0;
+            border-radius: 10px;
+            padding: 12px 25px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+
+        <h1>🎓 أولى إعدادي</h1>
+
+        <h2>تسجيل الدخول</h2>
+
+        <input type="text" id="name" placeholder="اكتب اسمك">
+
+        <input type="text" id="class" placeholder="اكتب صفك">
+
+        <br>
+
+        <button onclick="login()">دخول 🚀</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        function login() {
+            let name = document.getElementById("name").value;
+            let studentClass = document.getElementById("class").value;
+
+            if (name == "" || studentClass == "") {
+                document.getElementById("message").textContent =
+                    "⚠️ اكتب اسمك وصفك الأول";
+            } else {
+              localStorage.setItem("studentName", name);
+window.location.href = "index.html";      }
+        }
+    </script>
+
+</body>
+
+</html>
